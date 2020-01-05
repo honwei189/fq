@@ -1,5 +1,9 @@
 # fq
-Fast Query (Simple Web Query).  This is alternative of RESTful API, to reduce IO connections and provide more faster query results, easy to use for Web API, and also to query data from API server with multiple requests per query (1 HTTP POST connection).  Example:  Query for User Profile, User History and All signed-on users list at once (e.g:  open one connection -- http://API, and send 3 requests with requested specific JSON format), server shall return User Profile, User History and All signed-on users.  This is not long persistent / long pulling / websocket
+Fast Query (Simple web query engine) is designed for PHP (plan to develop in others language).
+
+This is alternate of RESTful API, to reduce IO connections and provide more faster query results to improve APP fast getting result or perform data actions, easy to use for Web API, and also to query data from API server with multiple requests per query (1 HTTP POST connection).
+
+Example:  Query for User Profile, User History and All signed-on users list at once (e.g:  open one connection -- http://API, and send 3 requests with specific JSON format), server shall return User Profile, User History and All signed-on users.  This is not long persistent / long pulling / websocket
 
   - Easy to use
   - JSON based data structure
