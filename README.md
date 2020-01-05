@@ -5,7 +5,7 @@ This is alternate of RESTful API, to reduce IO connections and provide more fast
 
 Easy to use for Web API, and also to query data from API server with multiple requests per query (1 HTTP POST connection).
 
-Example:  Query for [User Profile], [User History] and [All signed-on users list] at once (e.g:  open one connection -- http://API, and send 3 requests with specific JSON format), server shall return [User Profile], [User History] and [All signed-on users list].  This is not long persistent / long pulling / websocket
+Example:  Query for `User Profile`, `User History` and `All signed-on users list` at once (e.g:  open one connection -- http://API, and send 3 requests with specific JSON format), server shall return `User Profile`, `User History` and `All signed-on users list`.  This is not long persistent / long pulling / websocket
 
   - Easy to use
   - JSON based data structure
