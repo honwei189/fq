@@ -13,6 +13,7 @@ Example:  Query for `User Profile`, `User History` and `All signed-on users list
   - Multiple data query in one HTTP request
   - Save IO
   - Reduce mobile data usages
+  - JWT authentication (Enable / disable in config file) and allows for specific API not to use JWT
 
 ## Example (Client)
 
