@@ -54,7 +54,7 @@ curl_close($ch);
 print_r(json_decode($data));
 ```
 
-###Example (Server)
+### Example (Server)
 ```php
 index.php // APPLICATION_PATH/public/index.php
 
@@ -83,7 +83,7 @@ class user
     public function __construct()
     {
         // Define schema for CRUD / query purpose
-        
+
         $this->table = "users";
         $this->define_schema("id", "ID");
         $this->define_schema("name", "User name");
