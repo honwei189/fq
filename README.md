@@ -56,7 +56,7 @@ print_r(json_decode($data));
 
 ### Installation
 
-To use FDO, you are requires to install [`flayer`](https://github.com/honwei189/flayer.git)
+To use FQ, you are requires to install [`flayer`](https://github.com/honwei189/flayer.git)
 
 ```sh
 $ composer require honwei189/fdo
