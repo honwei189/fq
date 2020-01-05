@@ -54,9 +54,82 @@ curl_close($ch);
 print_r(json_decode($data));
 ```
 
+###Example (Server)
+```php
+index.php // APPLICATION_PATH/public/index.php
+
+<?php
+    require __DIR__ . '/../vendor/autoload.php';
+
+    $app = new honwei189\flayer;
+    honwei189\config::load();
+
+    $app->bind("honwei189\\fdo\\fdo");
+    $app->bind("honwei189\\fq\\fq");
+
+    $dbh = $app->fdo()->connect(honwei189\config::get("database", "mysql"));
+    
+    $app->fq()->set_path("api"); // APPLICATION_PATH/app/api
+    $app->fq()->bootstrap();
+?>
+
+user/user.php // APPLICATION_PATH/app/api/user/user.php
+
+<?php
+class user
+{
+    use \honwei189\fq\fql;
+    
+    public function __construct()
+    {
+        // Define schema for CRUD / query purpose
+        
+        $this->table = "users";
+        $this->define_schema("id", "ID");
+        $this->define_schema("name", "User name");
+        $this->define_schema("userid", "User ID");
+        $this->define_schema("gender", "Gender");
+        $this->define_schema("role", "User role");
+        $this->define_schema("utyp", "User type.  S = System admin, A = Admin, U = User");
+        $this->define_schema("email", "Email address");
+        $this->define_schema("addr", "Address");
+        $this->define_schema("status", "Account status");
+        $this->define_schema("crdt", "Record creation date & time");
+    }
+
+    // public function read(){
+    //     // $this->define_schema("id", "ID");
+    //     // $this->define_schema("name", "User name");
+    //     // $this->define_schema("userid", "User ID");
+    //     // $this->define_schema("gender", "Gender");
+    //     // $this->define_schema("age", "Age");
+    //     // $this->define_schema("email", "Email address");
+    //     // $this->define_schema("address", "Address");
+    //     // print_r($this);
+
+    //     return $this->query();
+
+    //     // return $this->db->by_id($this->query->id)->cols($this->query->select)->get();
+    // }
+
+    // public function find()
+    // {
+    //     return $this->query();
+    // }
+
+    public function test(){
+        // print_r($this->query);
+        
+        return json_encode(["aaa"]);
+    }
+}
+?>
+
+```
+
 ### Installation
 
-To use FQ, you are requires to install [`flayer`](https://github.com/honwei189/flayer.git)
+To use FQ, you are requires to install [`flayer`](https://github.com/honwei189/flayer.git) and install [`fdo`](https://github.com/honwei189/fdo.git)
 
 ```sh
 $ composer require honwei189/fdo
