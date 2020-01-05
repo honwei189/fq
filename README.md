@@ -129,7 +129,7 @@ class user
 
 ### Installation
 
-To use FQ, you are requires to install [`flayer`](https://github.com/honwei189/flayer.git) and install [`fdo`](https://github.com/honwei189/fdo.git)
+To use FQ, you are requires to install [`flayer`](https://github.com/honwei189/flayer.git) and [`fdo`](https://github.com/honwei189/fdo.git)
 
 ```sh
 $ composer require honwei189/fdo
