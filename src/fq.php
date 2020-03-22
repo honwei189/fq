@@ -2,7 +2,7 @@
 /*
  * @creator           : Gordon Lim <honwei189@gmail.com>
  * @created           : 13/05/2019 19:32:39
- * @last modified     : 23/12/2019 21:59:48
+ * @last modified     : 22/03/2020 22:11:27
  * @last modified by  : Gordon Lim <honwei189@gmail.com>
  */
 
@@ -247,13 +247,13 @@ class fq
             if ($this->http->is_jwt_auth) {
                 if (!$send_jwt_to_client) {
                     if (!$this->http->is_jwt_auth_success) {
-                        header("HTTP/1.0 401 Unauthorized");
+                        $this->http->http_error(401);
                     }
 
                     echo json_encode($data);
                 } else {
                     if ($query_jwt_has_failed) {
-                        header("HTTP/1.0 401 Unauthorized");
+                        $this->http->http_error(401);
                     }
                     echo json_encode([["token" => flayer::jwt()->generate_token()], $data]);
                 }
