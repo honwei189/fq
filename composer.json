@@ -6,8 +6,8 @@
         "email": "honwei189@gmail.com"
     }],
     "require": {
-        "honwei189/flayer": "~1.0",
-        "honwei189/fdo": "~1.0",
+        "honwei189/flayer": "~1.1",
+        "honwei189/fdo": "~1.1",
         "php": ">=7.3.0"
     },
     "autoload": {
@@ -20,7 +20,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0-dev"
+            "dev-master": "1.1-dev"
         },
         "laravel": {
             "providers": [
